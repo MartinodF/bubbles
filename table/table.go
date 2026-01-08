@@ -290,6 +290,7 @@ func (m *Model) SetHeaders(headers ...string) *Model {
 
 // SetRows sets the table rows.
 func (m *Model) SetRows(rows ...[]string) *Model {
+	m.table.ClearRows()
 	m.table.Rows(rows...)
 	return m
 }
